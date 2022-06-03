@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project LP BTS</title>
+    <style>
+      body {
+        background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+      }
+      h1 {
+        text-align: left;
+        font-size: 36px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 40px;
+        margin-top: 0;
+        margin-left: 50px;
+        color: gray;
+        line-height: 35px;
+      }
+      .h1-letters {
+        font-weight: 900;
+        color: black;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 8px;
+      }
+      hr {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: #1676b5;
+      }
+      h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 25px;
+        margin: 8px 0;
+      }
+      p {
+        margin-top: 8px;
+        margin-bottom: 13px;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        color: #1676b5;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background: rgba(122, 154, 214, 0.368);
+        margin: 0 auto 30px auto;
+        padding: 13px 20px;
+        border: 1px solid #1676b5;
+        border-radius: 30px;
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: linear-gradient(
+          109.6deg,
+          rgb(151, 213, 255) 11.2%,
+          rgb(255, 155, 185) 91.1%
+        );
+        cursor: pointer;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        border: 1.5px solid #1676b5;
+        border-radius: 10px;
+      }
+      .main-text {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 28px;
+        transition: all 250ms ease-in-out;
+      }
+      .main-text:hover {
+        background: rgba(122, 154, 214, 0.368);
+        border-radius: 8px;
+      }
+      .member-names {
+        font-style: oblique;
+        font-weight: 800;
+      }
+      .wiki-link {
+        display: block;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #1676b5;
+        line-height: 10px;
+        margin-top: 0;
+      }
+      .footer {
+        text-align: center;
+        font-family: monospace;
+        font-size: 14px;
+      }
+      .insta-link {
+        text-decoration: none;
+        color: #1676b5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <span class="h1-letters">B</span>eyond
+        <br />
+        <span class="h1-letters">T</span>he
+        <br />
+        <span class="h1-letters">S</span>cene
+      </h1>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/033/781/original/profile-kv.png?1652089121"
+        alt="bts"
+        width="700"
+      />
+      <hr />
+      <div class="main-text">
+        <h2>ABOUT BTS</h2>
+        <p>
+          <strong>BTS</strong> (Korean: 방탄소년단; RR:
+          <em> Bangtan Sonyeondan</em>), is a Grammy-nominated South Korean
+          group that has been capturing the hearts of millions of fans globally
+          since its debut in June 2013. The members of BTS are
+          <span class="member-names">
+            Jin, SUGA, J-Hope, RM, Jimin, V, and Jungkook
+          </span>
+          —co-writes and co-produces much of their own output. Originally a hip
+          hop group, their musical style has evolved to include a wide range of
+          genres. Their lyrics, often focused on personal and social commentary,
+          touch on the themes of mental health, troubles of school-age youth and
+          coming of age, loss, the journey towards loving oneself, and
+          individualism. Their work also often references literature and
+          psychological concepts and includes an alternative universe storyline.
+        </p>
+        <a
+          href="https://en.wikipedia.org/wiki/BTS"
+          class="wiki-link"
+          target="_blank"
+          title="BTS on Wikipedia"
+        >
+          Learn more on Wikipedia
+        </a>
+      </div>
+      <hr />
+      <button>Pre-Order the New Album 💿</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.instagram.com/mymeamors/"
+          target="_blank"
+          title="Visit my Instagram"
+          class="insta-link"
+        >
+          Dasha Grebenchuk
+        </a>
+      </p>
+    </div>
+    <script>
+      function guestInfo() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let header = document.querySelector("h1");
+        if (name.length > 0 && email.length > 0) {
+          header.innerHTML = "Thank you " + name + "! We 💜 you!";
+        } else {
+          alert("Sorry, we need your name and email for your pre-order 😞");
+        }
+      }
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", guestInfo);
+    </script>
+  </body>
+</html>
