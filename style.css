@@ -103,3 +103,12 @@ button:hover {
   text-decoration: none;
   color: #1676b5;
 }
+@media (max-width: 900px) {
+  .container {
+    padding: 30px 20px;
+  }
+  .main-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
